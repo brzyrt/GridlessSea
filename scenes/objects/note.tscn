@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bnd4q2nda4cy3"]
+
+[ext_resource type="Texture2D" uid="uid://civs8wan1rahv" path="res://sprites/note_marker.png" id="1_il1cl"]
+[ext_resource type="Script" uid="uid://bi1ddck7wrlo6" path="res://scripts/note.gd" id="1_ndos4"]
+[ext_resource type="Theme" uid="uid://dst3e4or8ofdr" path="res://note_theme.tres" id="1_siau7"]
+[ext_resource type="Texture2D" uid="uid://bcysm4v56eub7" path="res://sprites/note_length.png" id="2_ndos4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a26ma"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Note" type="HBoxContainer" unique_id=498755818]
+offset_right = 421.0
+offset_bottom = 31.0
+mouse_filter = 2
+theme = ExtResource("1_siau7")
+script = ExtResource("1_ndos4")
+
+[node name="Box" type="ColorRect" parent="." unique_id=2107845661]
+custom_minimum_size = Vector2(100, 0)
+custom_maximum_size = Vector2(-1, 25)
+layout_mode = 2
+color = Color(0.5856864, 0.7186788, 0.35460544, 1)
+
+[node name="HzLabel" type="Label" parent="Box" unique_id=1150562097]
+custom_maximum_size = Vector2(-1, 25)
+layout_mode = 0
+offset_left = 3.0
+offset_right = 53.0
+offset_bottom = 25.0
+text = "440 hz
+
+"
+label_settings = SubResource("LabelSettings_a26ma")
+
+[node name="TextureRect" type="TextureRect" parent="Box" unique_id=1800765879]
+visible = false
+layout_mode = 0
+offset_right = 25.0
+offset_bottom = 25.0
+texture = ExtResource("1_il1cl")
+stretch_mode = 2
+
+[node name="Length" type="TextureRect" parent="." unique_id=1263441038]
+layout_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 6
+texture = ExtResource("2_ndos4")
+stretch_mode = 2
+
+[connection signal="gui_input" from="Box" to="." method="_on_box_gui_input"]
+[connection signal="mouse_entered" from="Box" to="." method="_on_box_mouse_entered"]
+[connection signal="mouse_exited" from="Box" to="." method="_on_box_mouse_exited"]
+[connection signal="gui_input" from="Length" to="." method="_on_length_gui_input"]
