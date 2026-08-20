@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bptfljk3humm7"]
+
+[node name="TimeRectangle" type="ColorRect" unique_id=1754414120]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+color = Color(0.09353761, 0.13816169, 0.22347185, 1)

@@ -1,0 +1,7 @@
+note groups:
+	allow grouping of notes like midi items in reaper. can be split, maybe color coded
+	list of notes for a specific channel. maybe multiple channels?
+	can group, extend group length
+	save as seperate file which is referenced in the main song file (notes file)
+		can also be used for other notes, maybe freely placed text boxes or drawings
+	notes not read by executable
